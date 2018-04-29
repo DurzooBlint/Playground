@@ -1,0 +1,2 @@
+# Playground
+Python trainings
