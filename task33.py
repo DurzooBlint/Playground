@@ -1,4 +1,4 @@
-
+import json
 
 
 def load_data (file_name):
@@ -14,6 +14,7 @@ def load_data (file_name):
 
 
 
-
-    your_name = input('Who\'s birthday you want to know? ')
-    print(birthdays[your_name])
+with open('birthdays.json', 'w') as f:
+    data_raw = load_data('bdhs.txt')
+    data_raw['Stephen'] = '25.07'
+    json.dump(data_raw,f)
